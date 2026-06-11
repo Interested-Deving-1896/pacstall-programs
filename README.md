@@ -1,69 +1,75 @@
-# Pacstall Programs
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# pacstall-programs
 
-This is the default repository of pacscripts which [pacstall](https://github.com/pacstall/pacstall) uses to install software. You can fork this repository and add make your own package repository as long as it follows the basic structure:
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/pacstall-programs)
 
-```monospace
-package-repository/
-├── packages/
-│   ├── example-package1/
-│   │   ├── example-package1.pacscript
-│   │   └── .SRCINFO
-│   └── example-package2/
-│       ├── example-package2.pacscript
-│       └── .SRCINFO
-├── scripts/
-│   ├── srcinfo.sh
-│   ├── custom-script1.sh
-│   └── custom-script2.sh
-├── distrolist
-├── packagelist
-└── srclist
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
+
+## Architecture
+
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
+
+## Install
+
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
+
+```bash
+git clone https://github.com/Interested-Deving-1896/pacstall-programs.git
+cd pacstall-programs
 ```
 
-You can then use the `pacstall -A` command to add a repository to your `pacstallrepo` list.
-Consult the manpage (run `man 8 pacstall` and `man 5 pacstall`) for more info.
+## Usage
 
-## How to setup the environment for pacscript development
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-If you need help making a pacscript, visit [our wiki](https://github.com/pacstall/pacstall/wiki/Pacscript-101).
+## Configuration
 
-This repository maintains a certain standard of commits. To ensure that your commits are up to the standard, we use [pre-commit](https://pre-commit.com/) hooks.
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
 
-Here are the development dependencies that you need to install as a developer:
+## CI
 
-| Dependency | Purpose | How to install |
-|:-----------|:-------:|----------------|
-| [pre-commit](https://pre-commit.com/) | runs a series of formatting checks on git commits | `sudo pip install pre-commit` |
-| [shellcheck](https://www.shellcheck.net/) | checks for formatting and scripting issues | `pacstall -I shellcheck-bin` |
-| [shfmt](https://pkg.go.dev/mvdan.cc/sh/v3) | attempts to correct certain formatting issues | `pacstall -I shfmt-bin` |
-| [editor-config](https://editorconfig.org/#download) | ensures proper tabs when using a file editor | Install the plugin for your preferred editor |
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
 
-After the dependencies are installed simply clone this repository, and use `pre-commit install` to install the pre-configured hooks to your cloned repository.
+## Mirror chain
 
-Now, whenever you try to commit a patch all the configured hooks will run and block/fix your code so that it adheres to or standards.
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/pacstall-programs`](https://github.com/Interested-Deving-1896/pacstall-programs) and mirrored through:
 
-In case for some reason (false positives etc), you want to skip the hooks commit using `git commit --no-verify`
+```
+Interested-Deving-1896/pacstall-programs  ──►  OpenOS-Project-OSP/pacstall-programs  ──►  OpenOS-Project-Ecosystem-OOC/pacstall-programs
+```
 
-Additionally, we have created the following tools to improve package maintenance:
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-| Maintainence Tool | Purpose | How to install |
-|:-----------------|:-------:|----------------|
-| [pacup](https://github.com/pacstall/pacup) | keep packages up to date | `pacstall -I pacup` (stable) or `pacstall -I pacup-git` (develop) |
-| [quality-assurance.sh](https://github.com/pacstall/pacstall/blob/master/misc/scripts/quality-assurance.sh) | test PRs before being merged | `pacstall -Qa` (built-in, pacstall) |
-| [srcinfo.sh](https://github.com/pacstall/pacstall-programs/blob/master/scripts/srcinfo.sh) | generate and read repo data | `./scripts/srcinfo.sh` (built-in, pacstall-programs) |
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
 
 ## License
 
-Pacstall programs are licensed under the MIT License.
-
-> [!NOTE]
-> MIT license does not apply to the packages built by Pacstall, merely to the
-> files in this repository (the pacscripts, GitHub Action workflows,
-> documentation, etc.). It also might not apply to patches included in pacscripts,
-> which may be derivative works of the packages to which they apply. The
-> aforementioned artifacts are all covered by the licenses of the respective
-> packages.
-
-## Stats
-
-<p align="center"><img alt="Repobeats analytics image" src="https://repobeats.axiom.co/api/embed/6339f9352d6dc27063ee90400da619442ee5143b.svg" /></p>
+<!-- AI:start:license -->
+<!-- License not detected — add a LICENSE file to this repo. -->
+<!-- AI:end:license -->
